@@ -1,0 +1,10 @@
+--type-set=handlebars=.handlebars
+--type-set=haml=.haml
+--type-set=scss=.scss
+--type-set=slim=.slim
+--type-set=coffee=.coffee
+--type-set=cucumber=.feature
+
+--ignore-dir=tmp
+--ignore-dir=public
+--ignore-dir=.idea
