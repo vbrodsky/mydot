@@ -1,38 +1,62 @@
-" ----------
-" Vim Config
-" ----------
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
 "
-"
-" How this works:
-"
-" This file is minimal.  Most of the vim settings and initialization is in
-" several files in .vim/init.  This makes it easier to find things and to
-" merge between branches and repos.
-"
-" Please do not add configuration to this file, unless it *really* needs to
-" come first or last, like Pathogen and sourcing the machine-local config.
-" Instead, add it to one of the files in .vim/init, or create a new one.
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-surround'
 
 
-" Pathogen (This must happen first.)
-" --------
+" colors
+Bundle 'altercation/vim-colors-solarized'
 
-" filetype on                    " see http://tooky.co.uk/2010/04/08/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x.html
-filetype off                    " Avoid a Vim/Pathogen bug
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 
-set nocompatible                " Don't maintain compatibility with vi
-syntax on                       " Highlight known syntaxes
-filetype plugin indent on
+Bundle 'mileszs/ack.vim'
+
+" non github repos
+
+filetype plugin indent on     " required!
+set autoindent
+
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+"
+
+
+
+syntax on 
+" filetype plugin indent on
 
 
 " Source initialization files
-" ---------------------------
-
+" " ---------------------------
+"
 runtime! init/**.vim
+"
 
-
-" Machine-local vim settings - keep this at the end
-" --------------------------
+" " Machine-local vim settings - keep this at the end
+" " --------------------------
 silent! source ~/.vimrc.local
+
