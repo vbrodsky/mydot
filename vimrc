@@ -14,7 +14,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-surround'
 
 
 " colors
