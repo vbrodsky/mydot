@@ -3,10 +3,8 @@
 "
 " By Peter Jaros
 
-if exists("g:insert_mode_background_color")
-  augroup HighlightOnInsert
-    autocmd!
-    autocmd InsertEnter * execute "set background=light"
-    autocmd InsertLeave * execute "set background=dark"
-  augroup END
-endif
+augroup HighlightOnInsert
+  autocmd!
+  autocmd InsertEnter * execute "set background=light"
+  autocmd InsertLeave * execute "set background=dark"
+augroup END
