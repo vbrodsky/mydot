@@ -27,6 +27,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 
 Bundle 'mileszs/ack.vim'
+Bundle 'msanders/snipmate.vim'
 
 " non github repos
 
