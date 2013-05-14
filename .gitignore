@@ -1,4 +1,4 @@
 .netrwhist
 .vimlog
 .DS_Store
-bundle/
+bundle/*
