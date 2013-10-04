@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-endwise.git'
 "Bundle 'tpope/vim-surround'
 
 
@@ -32,7 +33,6 @@ Bundle 'msanders/snipmate.vim'
 " non github repos
 
 filetype plugin indent on     " required!
-set autoindent
 
 "
 " Brief help
