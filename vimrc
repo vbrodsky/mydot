@@ -15,7 +15,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
-"Bundle 'tpope/vim-surround'
 
 
 " colors
