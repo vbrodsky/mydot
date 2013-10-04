@@ -1,7 +1,10 @@
-" Change background color when inserting.
-" (Broken in terminal Vim: Solarized has a bug which makes it reload poorly.)
-" http://www.reddit.com/r/vim/comments/ggbcp/solarized_color_scheme/
-if has("gui_running")
-  " Commented out to support vim-powerline
-  " let g:insert_mode_background_color = "#18434E"
-end
+" Set g:insert_mode_background_color to a Vim color to set the background to
+" that color when in Insert mode.
+"
+" By Peter Jaros
+
+augroup HighlightOnInsert
+  autocmd!
+  autocmd InsertEnter * execute "set background=light"
+  autocmd InsertLeave * execute "set background=dark"
+augroup END

@@ -44,8 +44,8 @@ map <silent> <F7> gg=G`` :delmarks z<CR>:echo "Reformatted."<CR>
 imap <D-CR>     <Esc>o
 
 " Fast scrolling
-nnoremap <C-e>  3<C-e>
-nnoremap <C-y>  3<C-y>
+nnoremap <C-e>  5<C-e>
+nnoremap <C-y>  5<C-y>
 
 " File tree browser
 map \           :NERDTreeToggle<CR>
@@ -68,17 +68,17 @@ vmap <s-tab> <gv
 " FuzzyFinder and switchback commands
 map <leader>e   :e#<CR>
 map <leader>b   :FufBuffer<CR>
-map <leader><C-N> :FufFile **/<CR>
-map <D-e> :FufBuffer<CR>
+" map <leader><C-N> :FufFile **/<CR>
+" map <D-e> :FufBuffer<CR>
 map <leader>n :FufFile **/<CR>
-map <D-N> :FufFile **/<CR>
+" map <D-N> :FufFile **/<CR>
 
 " refresh the FuzzyFinder cache
 map <leader>rf :FufRenewCache<CR>
 
 " Command-T
-map <D-N>       :CommandTFlush<CR>:CommandT<CR>
-map <leader>f   :CommandTFlush<CR>:CommandT<CR>
+" map <D-N>       :CommandTFlush<CR>:CommandT<CR>
+" map <leader>f   :CommandTFlush<CR>:CommandT<CR>
 
 " ctags with rails load path
 "map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs /usr/local/bin/ctags -R public/javascripts<CR>
@@ -99,8 +99,12 @@ map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
 " Run tests
-map <leader>t :wa<CR>:RunTestLine<CR>
-map <leader>T :wa<CR>:RunTest<CR>
+" map <leader>t :wa<CR>:RunTestLine<CR>
+" map <leader>T :wa<CR>:RunTest<CR>
+
+" using vim-rails
+map <leader>t :.Rake<CR>
+map <leader>T :Rake<CR>
 
 map <F12> :write<CR>:RunTest<CR>
 imap <F12> <ESC><F12>
@@ -138,3 +142,7 @@ nmap } ]e
 " multiple lines
 vmap { [egv
 vmap } ]egv
+
+
+" vals bindings
+nmap <Space> i_<Esc>r

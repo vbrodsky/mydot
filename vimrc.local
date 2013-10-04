@@ -1,0 +1,36 @@
+if $TMUX == ''
+    set clipboard+=unnamed
+endif
+"set clipboard=unnamed
+
+"set t_Co=256
+
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+let g:solarized_termcolors=16
+let g:solarized_termtrans = 0
+colorscheme solarized
+
+set noswapfile
+set number
+
+" mouse
+set mouse=a
+
+" indentification
+set autoindent
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" add syntax status
+" add git status
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" NERDTree customizations
+let NERDTreeShowHidden=0
+let NERDChristmasTree=1
