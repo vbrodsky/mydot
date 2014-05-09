@@ -146,3 +146,5 @@ vmap } ]egv
 
 " vals bindings
 nmap <Space> i_<Esc>r
+map <leader>F :FixWhitespace<CR>
+autocmd FileType ruby autocmd BufWritePre <buffer> :FixWhitespace

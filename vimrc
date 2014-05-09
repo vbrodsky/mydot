@@ -15,21 +15,29 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
-
+Bundle 'tpope/vim-surround'
 
 " colors
 Bundle 'altercation/vim-colors-solarized'
 
 " vim-scripts repos
 Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 
 Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'bronson/vim-trailing-whitespace'
 
-" non github repos
+" file search
+Bundle 'kien/ctrlp.vim'
+Bundle 'FuzzyFinder'
+
+"indentation - helpful for slim
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'kchmck/vim-coffee-script'
+
 
 filetype plugin indent on     " required!
 
