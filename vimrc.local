@@ -11,7 +11,7 @@ else
     set background=dark
 endif
 let g:solarized_termcolors=16
-let g:solarized_termtrans = 0
+let g:solarized_termtrans = 1
 colorscheme solarized
 
 set noswapfile
@@ -32,5 +32,9 @@ set expandtab
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " NERDTree customizations
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 let NERDChristmasTree=1
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4

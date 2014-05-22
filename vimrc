@@ -1,60 +1,64 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+
+"do not know why vundler does not configure autoload for ack
+set rtp+=~/.vim/bundle/ack.vim/autoload
+
+call vundle#begin()
 
 " let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" required!
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
+" My Plugins here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-endwise.git'
+Plugin 'tpope/vim-surround'
 
 " colors
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
+Plugin 'L9'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 
-Bundle 'mileszs/ack.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'bronson/vim-trailing-whitespace'
+Plugin 'mileszs/ack.vim'
+Plugin 'msanders/snipmate.vim'
+Plugin 'tmhedberg/matchit'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " file search
-Bundle 'kien/ctrlp.vim'
-Bundle 'FuzzyFinder'
+Plugin 'kien/ctrlp.vim'
+Plugin 'FuzzyFinder'
 
 "indentation - helpful for slim
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'kchmck/vim-coffee-script'
 
-
+call vundle#end()
 filetype plugin indent on     " required!
 
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList          - list configured bundles
+" :PluginInstall(!)    - install(update) bundles
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" NOTE: comments after Plugin command are not allowed..
 "
 
 
 
-syntax on 
+syntax on
 " filetype plugin indent on
 
 
