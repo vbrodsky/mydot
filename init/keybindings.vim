@@ -3,6 +3,7 @@
 
 let mapleader = ","
 let maplocalleader = ";"
+let ctags_dir = "/usr/bin/ctags"
 
 " have W write as well for shift being held too long
 command W w
@@ -81,9 +82,9 @@ map <leader>rf :FufRenewCache<CR>
 " map <leader>f   :CommandTFlush<CR>:CommandT<CR>
 
 " ctags with rails load path
-"map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs /usr/local/bin/ctags -R public/javascripts<CR>
-"map <leader>rT :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs bundle exec rdoc -f tags; /usr/local/bin/ctags --append -R public/javascripts<CR>
-map <leader>rt :!echo "Updating ctags..." && /usr/local/bin/ctags ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp -R * $GEM_HOME/gems/*<CR>
+"map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs /usr/bin/ctags -R public/javascripts<CR>
+"map <leader>rT :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs bundle exec rdoc -f tags; /usr/bin/ctags --append -R public/javascripts<CR>
+map <leader>rt :!echo "Updating ctags..." && /usr/bin/ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp -R * $GEM_HOME/gems/*<CR>
 
 " Git blame
 map <leader>g   :Gblame<CR>
@@ -125,9 +126,9 @@ imap <F1>           <Nop>
 map <Leader><Leader> :!
 
 " AckGrep current word
-map <leader>a :call AckGrep()<CR>
+" map <leader>a :call AckGrep()<CR>
 " AckVisual current selection
-vmap <leader>a :call AckVisual()<CR>
+" vmap <leader>a :call AckVisual()<CR>
 
 " Recalculate diff when it gets messed up.
 nmap du :diffupdate<CR>

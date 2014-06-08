@@ -29,7 +29,7 @@ Plugin 'L9'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 
-Plugin 'mileszs/ack.vim'
+"Plugin 'mileszs/ack.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -41,6 +41,8 @@ Plugin 'FuzzyFinder'
 "indentation - helpful for slim
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -72,3 +74,4 @@ runtime! init/**.vim
 " " --------------------------
 silent! source ~/.vimrc.local
 
+Bundle 'rking/ag.vim'
