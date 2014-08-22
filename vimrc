@@ -17,9 +17,13 @@ Plugin 'gmarik/Vundle.vim'
 " original repos on github
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-endwise.git'
 Plugin 'tpope/vim-surround'
+
+" ruby / rails
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-bundler'
+Plugin 'skalnik/vim-vroom'
 
 " colors
 Plugin 'altercation/vim-colors-solarized'
@@ -35,12 +39,16 @@ Plugin 'tmhedberg/matchit'
 Plugin 'bronson/vim-trailing-whitespace'
 
 " file search
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
+Plugin 'wincent/command-t'
 Plugin 'FuzzyFinder'
 
 "indentation - helpful for slim
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'bogado/file-line'
+
 
 call vundle#end()
 filetype plugin indent on     " required!

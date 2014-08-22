@@ -1,4 +1,4 @@
-if $TMUX == ''
+iif $TMUX == ''
     set clipboard+=unnamed
 endif
 "set clipboard=unnamed
@@ -41,3 +41,5 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+set incsearch

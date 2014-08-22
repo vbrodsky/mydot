@@ -13,12 +13,9 @@ set pastetoggle=<F2>
 " Make Y consistent with D and C
 map Y           y$
 
-" Search
-nmap <leader>s  :%s/
-vmap <leader>s  :s/
-
 " Split screen
 map <leader>v   :vsp<CR>
+map <leader>s   :split<CR>
 
 " Move between screens
 map <leader>w   ^Ww
@@ -79,6 +76,7 @@ map <leader>rf :FufRenewCache<CR>
 " Command-T
 " map <D-N>       :CommandTFlush<CR>:CommandT<CR>
 " map <leader>f   :CommandTFlush<CR>:CommandT<CR>
+map <C-p>   :CommandTFlush<CR>:CommandT<CR>
 
 " ctags with rails load path
 "map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs /usr/local/bin/ctags -R public/javascripts<CR>
@@ -145,6 +143,8 @@ vmap } ]egv
 
 
 " vals bindings
+" insert one char
 nmap <Space> i_<Esc>r
+" fix spaces
 map <leader>F :FixWhitespace<CR>
 autocmd FileType ruby autocmd BufWritePre <buffer> :FixWhitespace
