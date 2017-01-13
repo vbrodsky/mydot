@@ -43,12 +43,15 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'wincent/command-t'
 Plugin 'FuzzyFinder'
 
-"indentation - helpful for slim
+" indentation - helpful for slim
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'bogado/file-line'
 
+
+"python
+Plugin 'vim-scripts/indentpython'
 
 call vundle#end()
 filetype plugin indent on     " required!

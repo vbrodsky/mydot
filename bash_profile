@@ -1,19 +1,3 @@
-#dev stuff
-#secret
-#export EPHRASE="ed hardy needs a loan"
-#Scout for bork
-#export scout_username='vlb@zestfinance.com'
-#export scout_password='E8_z7euS'
-
-
-
-
-#chef stuff
-#export OPSCODE_USER=vbrodsky
-#export aws_access_key_id="AKIAJDQXADMRDBIEILYQ"
-#export aws_secret_access_key="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"
-#export DATABAG_KEY_PATH="/Users/vlb/.secrets/zestcash/development/application_keys/chef_development_databag.key"
-
 #ENV
 #export EDITOR="/usr/bin/vim"
 export VISUAL='vim -f'
@@ -23,6 +7,7 @@ set -o vi
 #disable mysql history for security
 #export MYSQL_HISTFILE=/dev/null
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 #aliases
 alias h='history'
 alias g='grep'
@@ -36,9 +21,15 @@ alias sqlplus="rlwrap sqlplus"
 
 #projects
 alias www='cd /Users/valbrodsky/src/www'
-alias capt='cd /Users/valbrodsky/src/captain_solo'
 alias yoda='cd /Users/valbrodsky/src/yoda'
 alias jedi='cd /Users/valbrodsky/src/jedi'
+alias list='cd /Users/valbrodsky/src/listeners'
+alias komodo='cd /Users/valbrodsky/src/komodo'
+alias eis='cd /Users/valbrodsky/src/eis'
+alias eis-oms='cd /Users/valbrodsky/src/eis/eis-oms-app'
+alias eis-orch='cd /Users/valbrodsky/src/eis/eis-orchestration-app'
+alias eis-erp='cd /Users/valbrodsky/src/eis/eis-erp-app'
+alias eis-wms='cd /Users/valbrodsky/src/eis/eis_wms_app'
 
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -72,4 +63,19 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
 
 source ~/.oracle_client
-source ~/.oracle_client
+
+
+# Setting PATH for Python 3.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+#Setting path for Maven M2_HOME
+MAVEN_VERSION=3.3.9
+M2_HOME=/usr/local/maven/apache-maven-$MAVEN_VERSION
+M2=$M2_HOME/bin
+
+export M2_HOME
+export M2
+
+export PATH=$M2:$PATH
