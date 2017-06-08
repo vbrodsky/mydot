@@ -51,7 +51,10 @@ Plugin 'bogado/file-line'
 
 
 "python
-Plugin 'vim-scripts/indentpython'
+"Plugin 'vim-scripts/indentpython'
+"
+Plugin 'ternjs/tern_for_vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on     " required!
