@@ -39,7 +39,6 @@ Plugin 'tmhedberg/matchit'
 Plugin 'bronson/vim-trailing-whitespace'
 
 " file search
-" Plugin 'kien/ctrlp.vim'
 Plugin 'wincent/command-t'
 Plugin 'FuzzyFinder'
 
@@ -49,12 +48,10 @@ Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'bogado/file-line'
 
-
-"python
-"Plugin 'vim-scripts/indentpython'
-"
+" js
 Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shutnik/jshint2.vim'
 
 call vundle#end()
 filetype plugin indent on     " required!
